@@ -224,6 +224,9 @@ body::before{ /* نقش هندسي خفيف */
 .sebha-bar div{height:100%;background:linear-gradient(90deg,var(--emerald),var(--gold));transition:width .3s}
 @media(min-width:700px){.hadith-grid{grid-template-columns:1fr 1fr}.sebha-grid{grid-template-columns:1fr 1fr}}
 @media(min-width:1080px){.hadith-grid{grid-template-columns:repeat(3,1fr)}.sebha-grid{grid-template-columns:repeat(3,1fr)}}
+.week-select{font-family:inherit;font-weight:800;font-size:14px;color:var(--emerald-900);background:var(--card);
+  border:1.5px solid var(--gold-line);border-radius:999px;padding:9px 16px;cursor:pointer;max-width:100%}
+.week-select:focus{outline:none;box-shadow:0 0 0 4px rgba(200,162,74,.25)}
 .confirm-actions{display:flex;gap:10px;justify-content:center;margin-top:16px;flex-wrap:wrap}
 .toast-wrap{position:fixed;bottom:20px;right:50%;transform:translateX(50%);z-index:100;display:flex;
   flex-direction:column;gap:10px;align-items:center;width:min(420px,calc(100vw - 32px))}
