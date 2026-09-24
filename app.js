@@ -100,13 +100,7 @@
       return true;
     }catch(e){
       console.warn(e);
-      const code=String((e&&e.code)||""), em=String((e&&e.message)||"");
-      let msg="وضع عدم الاتصال: الحفظ على هذا الجهاز فقط";
-      if(code==="permission-denied") msg="المزامنة مقفولة من الصلاحيات: انشر الـ Rules (الخطوة 4 في README) ثم حدث الصفحة";
-      else if(code==="unavailable"||/network|failed to fetch|load failed/i.test(em)) msg="مفيش اتصال بخوادم جوجل: اتأكد من الإنترنت ثم حدث الصفحة";
-      else if(/database|does not exist|failed-precondition|not-found/i.test(code+" "+em)) msg="قاعدة Firestore مش موجودة: اعمل Create database (الخطوة 2 في README) ثم حدث الصفحة";
-      setSyncStatus(msg,false);
-      UI.toast(msg,"error");
+      setSyncStatus("وضع عدم الاتصال: الحفظ على هذا الجهاز فقط",false);
       return false;
     }
   }
