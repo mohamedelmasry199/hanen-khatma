@@ -10,6 +10,9 @@
   --shadow-sm:0 8px 24px -12px rgba(6,35,27,.25);
 }
 *{box-sizing:border-box}
+html,body{max-width:100%;overflow-x:hidden;overflow-x:clip}
+.topbar-inner>*,.weekbar>*,.juz-card,.dua-card,.report,.sebha-card,.step,.how,.summary,.memorial,.wahb,.forgive,.hadith-card{min-width:0}
+img,table,select{max-width:100%}
 html{scroll-behavior:smooth}
 body{
   margin:0; color:var(--ink); line-height:1.85;
@@ -30,7 +33,10 @@ body::before{ /* نقش هندسي خفيف */
 :focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:8px}
 
 /* ---------- Topbar ---------- */
-.topbar{position:sticky;top:0;z-index:30;background:rgba(255,253,246,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--gold-line)}
+.topbar{position:fixed;top:0;right:0;left:0;z-index:30;background:rgba(255,253,246,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--gold-line)}
+body{padding-top:80px}
+.topbar{transition:transform .3s ease}
+.topbar-hidden{transform:translateY(-110%)}
 .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 20px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:12px}
 .brand-mark{width:50px;height:50px;display:grid;place-items:center;color:var(--gold-soft);
@@ -161,6 +167,7 @@ body::before{ /* نقش هندسي خفيف */
 .missing{color:#b91c1c;font-weight:800}
 .footer{text-align:center;padding:30px 0 36px;color:var(--muted);margin-top:12px}
 .footer strong{color:var(--emerald-900)}
+.footer-dua{font-family:"Amiri",serif;font-size:19px;color:var(--emerald-900);margin:8px auto 4px;max-width:640px}
 
 /* ---------- Modal ---------- */
 .modal{position:fixed;inset:0;background:rgba(6,35,27,.55);backdrop-filter:blur(6px);display:none;place-items:center;padding:18px;z-index:50}
@@ -183,7 +190,17 @@ body::before{ /* نقش هندسي خفيف */
   .juz-grid{grid-template-columns:repeat(3,1fr)}
 }
 @media(max-width:640px){
-  .topbar-inner{justify-content:center;text-align:center}
+  body{padding-top:112px}
+  .topbar-inner{gap:8px;padding:8px 12px}
+  .brand{gap:8px}
+  .brand-mark{width:38px;height:38px;font-size:22px;border-radius:12px}
+  .brand strong{font-size:16px}
+  .brand small{font-size:11px}
+  .tabs{order:3;width:100%;justify-content:stretch}
+  .tab{flex:1;padding:7px 6px;font-size:13px;text-align:center}
+  .userbox{gap:6px;margin-inline-start:auto}
+  .user-badge{padding:5px 12px;font-size:12.5px}
+  #changeNameBtn{padding:6px 10px;font-size:12px;min-height:34px}
   .hero{padding:48px 18px 28px}
   .hero-stats{grid-template-columns:repeat(3,1fr)}
   .stat strong{font-size:22px}
@@ -225,7 +242,13 @@ body::before{ /* نقش هندسي خفيف */
 @media(min-width:700px){.hadith-grid{grid-template-columns:1fr 1fr}.sebha-grid{grid-template-columns:1fr 1fr}}
 @media(min-width:1080px){.hadith-grid{grid-template-columns:repeat(3,1fr)}.sebha-grid{grid-template-columns:repeat(3,1fr)}}
 .week-select{font-family:inherit;font-weight:800;font-size:14px;color:var(--emerald-900);background:var(--card);
-  border:1.5px solid var(--gold-line);border-radius:999px;padding:9px 16px;cursor:pointer;max-width:100%}
+  border:1.5px solid var(--gold-line);border-radius:999px;padding:9px 16px;cursor:pointer;max-width:100%;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.weekbar-actions{min-width:0}
+@media(max-width:640px){
+  .weekbar-actions{width:100%}
+  .week-select{flex:1 1 100%;min-width:0;font-size:13px;padding:9px 12px}
+}
 .week-select:focus{outline:none;box-shadow:0 0 0 4px rgba(200,162,74,.25)}
 .confirm-actions{display:flex;gap:10px;justify-content:center;margin-top:16px;flex-wrap:wrap}
 .toast-wrap{position:fixed;bottom:20px;right:50%;transform:translateX(50%);z-index:100;display:flex;
@@ -247,4 +270,7 @@ body::before{ /* نقش هندسي خفيف */
 .forgive small{color:var(--muted)}
 .forgive .btn{margin-top:10px}
 .wahb-reunion{background:linear-gradient(135deg,#123c2e,#04170f 70%)}
+.report table{table-layout:fixed}
+.report th:first-child{width:26%}
+.report th,.report td{overflow-wrap:anywhere}
 @media print{.topbar,.hero-actions,.card-actions,.weekbar-actions,#nameModal,.footer{display:none!important}.hero{box-shadow:none}}

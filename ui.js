@@ -56,5 +56,14 @@
     m.classList.add("open");
     return new Promise(res=>{ confirmResolve=res; });
   }
+  let lastY=window.scrollY||0;
+  window.addEventListener("scroll",()=>{
+    const bar=document.querySelector(".topbar");
+    if(!bar)return;
+    const y=window.scrollY||0;
+    if(y>140&&y>lastY) bar.classList.add("topbar-hidden");
+    else bar.classList.remove("topbar-hidden");
+    lastY=y;
+  },{passive:true});
   window.HanenUI={toast:toast,confirm:confirmDlg};
 })();

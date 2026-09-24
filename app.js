@@ -25,6 +25,11 @@
     const f=x=>x.toLocaleDateString("ar-EG",{day:"numeric",month:"long",year:"numeric"});
     return "أسبوع "+f(sat)+" - "+f(e);
   }
+  function shortSatLabel(sat){
+    const e=addDays(sat,6);
+    const f=x=>x.toLocaleDateString("ar-EG",{day:"numeric",month:"long"});
+    return f(sat)+" - "+f(e);
+  }
 
   // ---------- الأسبوعان ----------
   const curSat=saturdayOf(new Date());
@@ -136,8 +141,8 @@
 
   function buildWeekSelect(){
     const sel=$("weekSelect"); if(!sel)return;
-    const opts=[{id:curId,text:"هذا الأسبوع • "+labelForSat(curSat),disabled:false}];
-    if(canBook(nextId)) opts.push({id:nextId,text:"الأسبوع القادم • "+labelForSat(nextSat),disabled:false});
+    const opts=[{id:curId,text:"هذا الأسبوع • "+shortSatLabel(curSat),disabled:false}];
+    if(canBook(nextId)) opts.push({id:nextId,text:"الأسبوع القادم • "+shortSatLabel(nextSat),disabled:false});
     else opts.push({id:nextId,text:"الأسبوع القادم • يفتح الخميس",disabled:true});
     if(_legacy) opts.push({id:_legacy,text:storedLabel(_legacy)||_legacy,disabled:false});
     sel.innerHTML="";
