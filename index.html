@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ختمة قرآن | صدقة جارية لحنين</title>
+<meta name="description" content="ختمة قرآن أسبوعية صدقة جارية لحنين - اختر جزءك وشارك الأجر" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <div class="brand">
+      <span class="brand-mark">﴿</span>
+      <div>
+        <strong>ختمة حنين</strong>
+        <small>صدقة جارية • كل أسبوع ختمة</small>
+      </div>
+    </div>
+    <nav class="tabs">
+      <button class="tab active" data-tab="home">الرئيسية</button>
+      <button class="tab" data-tab="reading">القراءة</button>
+      <button class="tab" data-tab="reports">التقارير</button>
+    </nav>
+    <div class="userbox">
+      <span id="currentUserBadge" class="user-badge">زائر</span>
+      <button id="changeNameBtn" class="btn btn-ghost btn-small">تغيير الاسم</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- HOME -->
+  <section id="home" class="panel active">
+    <div class="hero">
+      <p class="hero-eyebrow">بسم الله الرحمن الرحيم • صدقة جارية</p>
+      <h1>ختمة قرآن أسبوعية<br /><span>على روح حنين</span></h1>
+      <p class="hero-date">توفيت يوم 23 / 8 • ربنا يرحمها ويغفر لها ويجعل القرآن نورا لها في قبرها</p>
+      <p class="hero-verse">﴿ وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا ﴾</p>
+      <div class="hero-divider">✦</div>
+      <div class="hero-actions">
+        <button class="btn btn-primary" data-tab="reading">اختار جزءك هذا الأسبوع</button>
+        <button class="btn btn-ghost" data-tab="reports">شوف تقرير الأسبوع</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong id="statDone">0</strong><span>أجزاء تمت</span></div>
+        <div class="stat"><strong id="statReserved">0</strong><span>محجوزة</span></div>
+        <div class="stat"><strong id="statMissing">30</strong><span>متبقية</span></div>
+      </div>
+    </div>
+
+    <div class="memorial">
+      <p class="memorial-kicker">كلمة عن حنين 🤍</p>
+      <p class="memorial-text">حنين كانت الأخت الحنونة والقلب الطيب اللي بيجمع العيلة بحنيتها وضحكتها. كانت السند في الشدة، والفرحة في كل بيت تدخله، والكلمة الطيبة اللي بتطبطب على القلوب. رحلت يوم 23 / 8 وسابت فراغ كبير محدش يقدر يملاه، لكن سيرتها الطيبة وذكراها الحلوة عايشة جوانا، ودعواتنا ليها مش هتنقطع. الصفحة دي معمولة عشان يفضل ثوابها جاري: كل جزء يتقرأ وكل دعوة وكل تسبيحة بنوهب ثوابها لها، وربنا يتقبل ويجمعنا بيها في الفردوس الأعلى.</p>
+      <p class="memorial-verse">﴿ رَبَّنَا اغْفِرْ لَنَا وَلِإِخْوَانِنَا الَّذِينَ سَبَقُونَا بِالْإِيمَانِ ﴾ <span>— الحشر: 10</span></p>
+    </div>
+
+    <div class="forgive">
+      <p class="memorial-kicker">لو ليك حق عند حنين سامحها 🤍</p>
+      <h3>دعاء التحلل والمسامحة</h3>
+      <p>«اللهم إني أشهدك أني قد سامحت حنين، وعفوت عنها في كل غيبة أو حق أو مظلمة لي عندها، اللهم فاعف عنها واغفر لها، ولا تجعل لأحد عندها مظلمة إلا تحللتها منها برحمتك وفضلك، اللهم اجعل عفوي عنها شفاعة لها وشفاعة لي يوم القيامة»</p>
+      <small>قول الدعاء ده بقلبك تبقى أبرأت ذمتها — قال ﷺ: «من كانت له مظلمة لأخيه فليتحلله منها اليوم قبل أن لا يكون دينار ولا درهم» — صحيح البخاري 2449</small><br />
+      <button class="btn btn-ghost btn-small copy-dua">نسخ الدعاء</button>
+    </div>
+
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">أحاديث تبين إن عملنا بيوصلها</h2>
+        <p class="section-sub">أحاديث صحيحة — المصدر مكتوب تحت كل حديث</p>
+      </div>
+    </div>
+    <div class="hadith-grid">
+      <article class="hadith-card"><p>«إِذَا مَاتَ ابْنُ آدَمَ انْقَطَعَ عَمَلُهُ إِلَّا مِنْ ثَلَاثٍ: صَدَقَةٍ جَارِيَةٍ، أَوْ عِلْمٍ يُنْتَفَعُ بِهِ، أَوْ وَلَدٍ صَالِحٍ يَدْعُو لَهُ»</p><span class="src">صحيح مسلم 1631</span></article>
+      <article class="hadith-card"><p>«اقْرَءُوا الْقُرْآنَ فَإِنَّهُ يَأْتِي يَوْمَ الْقِيَامَةِ شَفِيعًا لِأَصْحَابِهِ»</p><span class="src">صحيح مسلم 804</span></article>
+      <article class="hadith-card"><p>«إِنَّ اللهَ لَيَرْفَعُ الدَّرَجَةَ لِلْعَبْدِ الصَّالِحِ فِي الْجَنَّةِ، فَيَقُولُ: يَا رَبِّ أَنَّى لِي هَذِهِ؟ فَيَقُولُ: بِاسْتِغْفَارِ وَلَدِكَ لَكَ»</p><span class="src">مسند أحمد 10610 • حسّنه الألباني</span></article>
+    </div>
+
+    <div class="wahb">
+      <h3>دعاء وهب ثواب القراءة لحنين</h3>
+      <p>«اللهم اجعل ثواب ما قرأناه من القرآن الكريم نورًا ورحمةً لحنين، اللهم تقبَّله منها وارفَع به درجتها، واجعله لها شفيعًا ونورًا في قبرها، واغفر لها وارحمها رحمةً واسعة»</p>
+      <small>دعاء جائز من أقوال أهل العلم في إهداء ثواب القراءة للميت — وليس نص حديث</small><br />
+      <button class="btn btn-ghost btn-small copy-dua">نسخ الدعاء</button>
+    </div>
+
+    <div class="wahb wahb-reunion">
+      <h3>دعاء اللقاء في الجنة</h3>
+      <p>«اللهم اجمعنا بحنين في الفردوس الأعلى بغير حساب ولا سابقة عذاب، اللهم اجعل لقاءنا بها لقاء فرح لا فراق بعده، واسقنا وإياها من حوض نبيك ﷺ شربة لا نظمأ بعدها أبدا، واربط على قلوبنا حتى نلقاها على خير»</p>
+      <small>دعاء من القلب — يشهد لمعناه «أو ولد صالح يدعو له» صحيح مسلم 1631</small><br />
+      <button class="btn btn-ghost btn-small copy-dua">نسخ الدعاء</button>
+    </div>
+
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">أدعية صحيحة من السنة لحنين</h2>
+        <p class="section-sub">كل دعاء تحته مصدره — انسخ وادع لها</p>
+      </div>
+    </div>
+    <div class="duas" id="duas">
+      <article class="dua-card"><p>اللهم اغفر لحنين وارحمها، وعافها واعف عنها، وأكرم نزلها، ووسع مدخلها، واغسلها بالماء والثلج والبرد، ونقها من الخطايا كما نقيت الثوب الأبيض من الدنس.</p><span class="src">صحيح مسلم 963</span><button class="btn btn-ghost btn-small copy-dua">نسخ الدعاء</button></article>
+      <article class="dua-card"><p>اللهم إن حنين في ذمتك وحبل جوارك، فقها فتنة القبر وعذاب النار، وأنت أهل الوفاء والحق، فاغفر لها وارحمها إنك أنت الغفور الرحيم.</p><span class="src">سنن أبي داود 3202 • صححه الألباني</span><button class="btn btn-ghost btn-small copy-dua">نسخ الدعاء</button></article>
+      <article class="dua-card"><p>اللهم اغفر لحينا وميتنا، وشاهدنا وغائبنا، وصغيرنا وكبيرنا، وذكرنا وأنثانا، اللهم من أحييته منا فأحيه على الإسلام، ومن توفيته منا فتوفه على الإيمان.</p><span class="src">سنن الترمذي 1024 • صححه الألباني</span><button class="btn btn-ghost btn-small copy-dua">نسخ الدعاء</button></article>
+      <article class="dua-card"><p>اللهم لا تحرمنا أجرها، ولا تفتنا بعدها، واغفر لنا ولها، واجمعنا بها في جنات النعيم.</p><span class="src">سنن ابن ماجه 1498 • صححه الألباني</span><button class="btn btn-ghost btn-small copy-dua">نسخ الدعاء</button></article>
+      <article class="dua-card"><p>اللهم اجعل قبرها روضة من رياض الجنة، وافتح لها بابا إلى الجنة، وافرشه لها من فراش الجنة.</p><span class="src">دعاء مأثور المعنى — الترمذي 2461 في نعيم القبر</span><button class="btn btn-ghost btn-small copy-dua">نسخ الدعاء</button></article>
+      <article class="dua-card"><p>اللهم اجعل القرآن العظيم ربيع قلوبنا ونور قبورنا، واجعله شفيعا لحنين يوم القيامة ورفعة لها في الدرجات.</p><span class="src">دعاء — يشهد له حديث «شفيعا لأصحابه» مسلم 804</span><button class="btn btn-ghost btn-small copy-dua">نسخ الدعاء</button></article>
+      <article class="dua-card"><p>ربنا اغفر لنا ولإخواننا الذين سبقونا بالإيمان، ولا تجعل في قلوبنا غلا للذين آمنوا، ربنا إنك رءوف رحيم.</p><span class="src">سورة الحشر: 10</span><button class="btn btn-ghost btn-small copy-dua">نسخ الدعاء</button></article>
+      <article class="dua-card"><p>اللهم أنت ربها، خلقتها وأنت هديتها للإسلام، وأنت قبضت روحها وأنت أعلم بسرها وعلانيتها، جئنا شفعاء فاغفر لها.</p><span class="src">سنن أبي داود 3201 • حسّنه الألباني</span><button class="btn btn-ghost btn-small copy-dua">نسخ الدعاء</button></article>
+      <article class="dua-card"><p>اللهم ارحمها رحمة واسعة، وتجاوز عن سيئاتها، واجزها عن الإحسان إحسانا وعن الإساءة عفوا وغفرانا.</p><span class="src">دعاء — معناه ثابت في أدعية الجنازة</span><button class="btn btn-ghost btn-small copy-dua">نسخ الدعاء</button></article>
+      <article class="dua-card"><p>اللهم اجمعنا بها في الفردوس الأعلى بغير حساب ولا سابقة عذاب، واربط على قلوب أهلها وأحبابها وألهمهم الصبر والسلوان.</p><span class="src">دعاء — يشهد له «أو ولد صالح يدعو له» مسلم 1631</span><button class="btn btn-ghost btn-small copy-dua">نسخ الدعاء</button></article>
+      <article class="dua-card"><p>اللهم اجعل ثواب ما قرأناه من القرآن وسبحناه من الذكر في ميزان حسناتها، وضاعف لها الأجر أضعافا كثيرة.</p><span class="src">دعاء وهب الثواب — جائز عند جمهور العلماء</span><button class="btn btn-ghost btn-small copy-dua">نسخ الدعاء</button></article>
+      <article class="dua-card"><p>اللهم يمّن كتابها، ويسّر حسابها، وثقّل بالحسنات ميزانها، وثبّت على الصراط أقدامها.</p><span class="src">دعاء — معناه من أدعية السلف للميت</span><button class="btn btn-ghost btn-small copy-dua">نسخ الدعاء</button></article>
+    </div>
+
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">مسبحة حنين — اذكر واهدِ الثواب لها</h2>
+        <p class="section-sub">دوس +1 مع كل ذكر — العداد محفوظ على جهازك</p>
+      </div>
+      <button id="sebhaResetAll" class="btn btn-ghost btn-small">تصفير الكل</button>
+    </div>
+    <p id="sebhaTotal" class="sebha-total">مجموع التسبيحات المهداة لحنين: 0</p>
+    <div id="misbahaGrid" class="sebha-grid"></div>
+
+    <div class="how">
+      <h2 class="section-title">إزاي تشارك في الختمة؟</h2>
+      <p class="section-sub">أربع خطوات وتاخد الأجر معانا</p>
+      <div class="steps">
+        <div class="step"><b>1</b><span>ادخل صفحة <strong>القراءة</strong> واكتب اسمك.</span></div>
+        <div class="step"><b>2</b><span>اختار جزء أو أكتر — المحجوز مينفعش حد تاني ياخده نفس الأسبوع.</span></div>
+        <div class="step"><b>3</b><span>بعد ما تخلص قراءة دوس <strong>تمت القراءة ✅</strong>.</span></div>
+        <div class="step"><b>4</b><span>آخر الأسبوع شوف <strong>التقارير</strong>: مين قرأ والأجزاء الناقصة.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- READING -->
+  <section id="reading" class="panel">
+    <div class="weekbar">
+      <div>
+        <h2>أجزاء هذا الأسبوع</h2>
+        <p id="currentWeekLabel" class="muted">—</p>
+        <p id="syncStatus" class="muted">وضع عدم الاتصال: الحفظ على هذا الجهاز فقط</p>
+      </div>
+      <div class="weekbar-actions">
+        <button id="exportBtn" class="btn btn-ghost btn-small">تحميل التقرير ⬇</button>
+        <button id="newWeekBtn" class="btn btn-primary btn-small">بدء أسبوع جديد</button>
+      </div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-meta"><span id="weekProgressText">0 / 30</span><span>نسبة الإنجاز</span></div>
+      <div class="progress"><div id="weekProgress" style="width:0%"></div></div>
+    </div>
+    <div class="legend">
+      <span><i class="dot avail"></i> متاح</span>
+      <span><i class="dot reserved"></i> محجوز</span>
+      <span><i class="dot done"></i> تمت قراءته</span>
+    </div>
+    <div id="juzGrid" class="juz-grid"></div>
+  </section>
+
+  <!-- REPORTS -->
+  <section id="reports" class="panel">
+    <h2 class="section-title">تقارير الأسابيع</h2>
+    <p class="section-sub">تقرير كل أسبوع: مين قرأ إيه، ومين محجوز ولم يتم، والأجزاء الناقصة</p>
+    <div id="weeklySummary" class="summary"></div>
+    <div id="reportsList" class="reports"></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>صدقة جارية على روح <strong>حنين</strong> • اللهم تقبل • 23 / 8 🤍</p>
+    <small>لو المزامنة مفعلة الحجز بيظهر على كل الأجهزة لحظيا — شوف حالة الاتصال في صفحة القراءة</small>
+  </div>
+</footer>
+
+<!-- NAME MODAL -->
+<div id="nameModal" class="modal">
+  <div class="modal-card">
+    <div class="modal-top"></div>
+    <div class="modal-body">
+      <h3>أهلا بيك في ختمة حنين 🤍</h3>
+      <p class="muted">اكتب اسمك عشان تحجز بيه الأجزاء</p>
+      <input id="userNameInput" placeholder="مثال: أحمد" maxlength="30" />
+      <button id="saveNameBtn" class="btn btn-primary">دخول الختمة</button>
+    </div>
+  </div>
+</div>
+
+<div id="toastWrap" class="toast-wrap" aria-live="polite"></div>
+
+<div id="confirmModal" class="modal">
+  <div class="modal-card">
+    <div class="modal-top"></div>
+    <div class="modal-body">
+      <h3 id="confirmTitle">تأكيد</h3>
+      <p id="confirmMsg" class="muted"></p>
+      <div class="confirm-actions">
+        <button id="confirmOk" class="btn btn-primary btn-small">تأكيد</button>
+        <button id="confirmCancel" class="btn btn-ghost btn-small">تراجع</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="quran-data.js"></script>
+<script src="ui.js"></script>
+<script src="app.js"></script>
+<script src="misbaha.js"></script>
+</body>
+</html>
